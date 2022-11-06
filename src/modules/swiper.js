@@ -24,10 +24,11 @@ const swiper = () => {
       el: '.swiper-pagination',
       clickable: true,
     },
-    effect: 'flip',
-    flipEffect: {
-      slideShadows: false,
-    },
+    // effect: 'cube',
+    // flipEffect: {
+    //   slideShadows: false,
+    // },
+
     speed: 800,
     autoplay: {
       delay: 3000,

@@ -2,6 +2,8 @@
   --color: #000000;
   --color-active: #197bbd;
   --main: #abe3ed;
+  --white: #fff;
+  --green: rgb(0 178 160);
 }
 
 body {
@@ -304,4 +306,8 @@ body {
       position: absolute;
     }
   }
+}
+.portfolio {
+  padding: 100px 0;
+  background-color: var(--main);
 }
