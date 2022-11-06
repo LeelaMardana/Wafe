@@ -1,5 +1,5 @@
 {
-  "name": "webpack",
+  "name": "wafe",
   "version": "1.0.0",
   "description": "webpack",
   "main": "index.js",
@@ -31,5 +31,8 @@
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.9.3"
+  },
+  "dependencies": {
+    "@fancyapps/ui": "^4.0.31"
   }
 }
