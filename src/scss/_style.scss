@@ -1,3 +1,8 @@
+:root {
+  --color: #000000;
+  --color-active: #197bbd;
+}
+
 body {
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: 300;
@@ -5,6 +10,7 @@ body {
   line-height: 18px;
   letter-spacing: 0.6px;
   color: #242121;
+  background-color: #eff6ff;
 }
 
 .container {
@@ -55,6 +61,12 @@ body {
   width: 100%;
   top: 0;
   left: 0;
+  background: linear-gradient(
+    270deg,
+    rgb(215, 243, 240, 0.9) 0%,
+    rgb(83, 255, 244, 0.9) 100%
+  );
+
   &__wrap {
     margin-top: 10px;
     height: 80px;
@@ -72,13 +84,21 @@ body {
       font-weight: 400;
       font-size: 24px;
       line-height: 28px;
-      color: #fff;
-      transition: all 0.3s;
-      border-bottom: 2px solid transparent;
+      color: rgb(0, 0, 0);
+      transition: all 0.2s;
+      border-bottom: 1px solid transparent;
       padding-bottom: 5px;
       &:hover {
-        border-bottom: 2px solid #45ccbf;
+        border-color: #060606;
       }
+    }
+  }
+
+  & .logo__link {
+    color: (var(--color));
+    transition: color 0.2s;
+    &:hover {
+      color: (var(--color-active));
     }
   }
 }
@@ -148,6 +168,80 @@ body {
 }
 
 .get {
-  background: #f8f8f8;
-  padding: 200px 0;
+  padding: 150px 0;
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+  }
+  &__item {
+    max-width: 350px;
+    &-title {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 28px;
+      letter-spacing: 0.6px;
+      color: #242121;
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      max-width: 150px;
+    }
+    &-img-title {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 15px;
+      gap: 12px;
+      height: 56px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .img-wrap {
+    width: 55px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__info {
+    max-width: 450px;
+    width: 100%;
+    &-wrap {
+      &:last-child {
+        & .get__info-item--text {
+          padding-bottom: 0;
+        }
+      }
+    }
+    &-item {
+      display: flex;
+      & span {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 18px;
+        letter-spacing: 0.6px;
+      }
+      &--text {
+        padding-bottom: 10px;
+      }
+    }
+    &-img {
+      padding: 0 10px 1px 0;
+    }
+  }
+  &__descr {
+    max-width: 600px;
+    &-text {
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
