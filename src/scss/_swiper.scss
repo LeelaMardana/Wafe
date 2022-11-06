@@ -5,6 +5,7 @@
   overflow: hidden !important;
   display: flex;
   flex-direction: column-reverse;
+  z-index: 0 !important;
   &-container {
     position: relative;
   }
@@ -26,6 +27,7 @@
     height: 30px;
     align-items: center;
     top: -50px;
+    z-index: 0 !important;
   }
   &-btns {
     display: flex;
@@ -33,7 +35,6 @@
     position: absolute;
     transform: translate(-50%, -50%);
     width: calc(100% - 30px);
-    z-index: 100;
     left: 50%;
     top: 50%;
     .swiper-btn {
