@@ -13,31 +13,156 @@
   </head>
 
   <body>
-    <section class="section">
-      <h1>WEBPACK START</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur in
-        eius qui repellendus non. Amet voluptatem, sed, enim dolor ipsam
-        explicabo ratione consequuntur corrupti unde placeat omnis. Veniam, vero
-        id.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur in
-        eius qui repellendus non. Amet voluptatem, sed, enim dolor ipsam
-        explicabo ratione consequuntur corrupti unde placeat omnis. Veniam, vero
-        id.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur in
-        eius qui repellendus non. Amet voluptatem, sed, enim dolor ipsam
-        explicabo ratione consequuntur corrupti unde placeat omnis. Veniam, vero
-        id.
-      </p>
-      <img
-        src="./images/image.png"
-        alt="Welcome to Webpack"
-        style="margin: auto"
-      />
+    <header class="header">
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar__wrap">
+            <div class="logo">
+              <a class="logo__link" href="#">
+                <img class="logo__img" src="images/logo.svg" alt="logo" />
+              </a>
+            </div>
+            <ul class="menu">
+              <li class="menu__item">
+                <a class="menu__item-link" href="#about">О нас</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__item-link" href="#features">Услуги</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__item-link" href="#technology">Стоимость</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__item-link" href="#contact">Блог</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__item-link" href="#">Команда</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__item-link" href="#">Контакты</a>
+              </li>
+            </ul>
+            <div class="menu-btn">
+              <div class="burger">
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="header-wrapper">
+          <div class="hero">
+            <h1 class="hero__title">WAWE</h1>
+            <p class="hero__text">Школа серфинга на канарских Островах</p>
+            <button class="hero__btn">Присоединиться</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="get" id="get">
+      <div class="container">
+        <h2 class="title">В ШКОЛЕ ВЫ ПОЛУЧИТЕ</h2>
+        <div class="get__items">
+          <div class="get__item">
+            <div class="get__item-img-title">
+              <img
+                class="get__item-img get__item-img-accomodation"
+                src="images/accommodation.svg"
+                alt="Картинка"
+              />
+              <h4 class="get__item-title">ПРОЖИВАНИЕ</h4>
+            </div>
+            <p class="get__item-text">
+              Наша школа серфинга находится в 100 м от океанского побережья. К
+              услугам гостей открытый бассейн и бесплатный Wi-Fi. Из верхней
+              террасы открывается вид на океан. Расстояние до центра города 15
+              мин.
+            </p>
+          </div>
+          <div class="get__item">
+            <div class="get__item-img-title">
+              <img class="get__item-img" src="images/fly.svg" alt="Картинка" />
+              <h4 class="get__item-title">
+                ПЕРЕЛЕТ И <br />
+                СТРАХОВКУ
+              </h4>
+            </div>
+            <p class="get__item-text">
+              Все участники программы застрахованы страховой компанией Allianz.
+              <br />
+              Перелет из Тенерифе до острова Лансароте и обратно входит в
+              стоимость программы
+            </p>
+          </div>
+          <div class="get__item">
+            <div class="get__item-img-title">
+              <img
+                class="get__item-img"
+                src="images/study.svg"
+                alt="Картинка"
+              />
+              <h4 class="get__item-title">
+                ОБУЧЕНИЕ И <br />
+                ЭКИПИРОВКУ
+              </h4>
+            </div>
+            <p class="get__item-text">
+              Все оборудование и экипировка известных производителей и
+              предоставляется на весь курс программы. Тренировочный процесс
+              начинается с определения вашего уровня катания
+            </p>
+          </div>
+        </div>
+        <div class="get__inner">
+          <div class="get__info">
+            <div class="get__info-item">
+              <img
+                class="get__info-img"
+                style="width: calc(100% - 41px - (100% - 85%))"
+                src="images/wawe85.svg"
+                alt="Волна"
+              />
+              <span>85%</span>
+            </div>
+            <p class="get__info-item--text">Приехали второй раз</p>
+            <div class="get__info-item">
+              <img
+                class="get__info-img"
+                style="width: calc(100% - 41px - (100% - 95%))"
+                src="images/wawe95.svg"
+                alt="Волна"
+              />
+              <span>95%</span>
+            </div>
+            <p class="get__info-item--text">Научились кататься</p>
+            <div class="get__info-item">
+              <img
+                class="get__info-img"
+                style="width: calc(100% - 41px - (100% - 99%))"
+                src="images/wawe99.svg"
+                alt="Волна"
+              />
+              <span>99%</span>
+            </div>
+            <p class="get__info-item--text">Довольных клиентов</p>
+          </div>
+          <div class="get__descr">
+            <p class="get__descr-text">
+              Огромным преимуществом нашей школы является собственная методика
+              обучения. Мы разработали собственный стиль обучения серфингу,
+              который позволяет новичкам максимально быстро встать на доску.
+            </p>
+            <p class="get__descr-text">
+              Именно наша методика и наши преподаватели позволили нам пройти
+              аттестацию Федерации серфинга Канарских островов - FEDERACIÓN
+              CANARIA DE SURF. Это означает, что наша школа соответствует всем
+              мировым стандартам. Переаттестация производится ежегодно и это
+              позволяет нам всегда стремиться к улучшению обучения.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
   </body>
 </html>

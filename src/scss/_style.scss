@@ -1,4 +1,153 @@
 body {
-  background-color: rgb(129, 182, 213);
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.6px;
+  color: #242121;
+}
+
+.container {
+  max-width: 1220px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: 0.6px;
+  color: #01353e;
   text-align: center;
+  position: relative;
+  padding: 0 49px 0;
+  margin-bottom: 100px;
+  &::after {
+    content: '/';
+    position: absolute;
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 85px;
+    letter-spacing: 0.6px;
+    color: #00b2a0;
+  }
+}
+
+.header {
+  background-image: url('./images/header-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 100px;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  &-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
+.navbar {
+  position: fixed;
+  z-index: 50;
+  width: 100%;
+  top: 0;
+  left: 0;
+  &__wrap {
+    margin-top: 10px;
+    height: 80px;
+    transition: all 0.5s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  & .menu {
+    display: flex;
+    width: 777px;
+    gap: 45px;
+    &__item-link {
+      font-family: 'Roboto Condensed', sans-serif;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 28px;
+      color: #fff;
+      transition: all 0.3s;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 5px;
+      &:hover {
+        border-bottom: 2px solid #45ccbf;
+      }
+    }
+  }
+}
+
+.hero {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10vh;
+  align-items: center;
+  height: 70vh;
+  &__title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 200px;
+    line-height: 235px;
+    letter-spacing: 0.6px;
+    color: #0d302c;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.6px;
+    color: #000000;
+  }
+  &__btn {
+    margin-top: auto;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 18px;
+    letter-spacing: 0.6px;
+    color: #ffffff;
+    padding: 24px 60px;
+    border: none;
+    background: #0d0f0f;
+    opacity: 0.9;
+    cursor: pointer;
+    transition: all 0.2s;
+    &:hover {
+      background-color: #0d0f0f;
+      color: #00b2a0;
+      opacity: 1;
+    }
+  }
+}
+
+.button {
+  text-transform: uppercase;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 18px;
+  letter-spacing: 0.6px;
+  color: #242121;
+  padding: 24px 80px;
+  border: 1px solid #c4c4c4;
+  background: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    color: #00b2a0;
+    border-color: #00b2a0;
+  }
+}
+
+.get {
+  background: #f8f8f8;
+  padding: 200px 0;
 }
