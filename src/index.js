@@ -11,6 +11,6 @@ import { swiper } from './modules/swiper';
 swiper();
 
 // Own scripts
-import { first } from './modules/first';
+import { tra } from './modules/tra';
 
-first();
+tra();

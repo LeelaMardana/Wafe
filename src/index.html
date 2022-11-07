@@ -331,49 +331,145 @@
         </div>
       </div>
     </section>
-    <section class="connection">
+    <section class="application">
       <div class="container">
-        <h2 class="title connection__title" id="connection">ОСТАВИТЬ ЗАЯВКУ</h2>
-        <div class="connection__inner">
-          <form class="form">
-            <input class="form__text" type="text" placeholder="Имя" />
-            <input class="form__text" type="tel" placeholder="Телефон" />
-            <textarea
-              class="form__textarea"
-              placeholder="Оставьте сообщение, и мы свяжемся с Вами в ближайшее время"
-            ></textarea>
-            <button class="form__button" type="submit">ОТПРАВИТЬ</button>
-          </form>
-          <div class="contacts">
-            <p class="contacts__text">
-              Есть вопрос?<br />
-              Вы можете связаться с нами:
-            </p>
-            <p class="contacts__text">
-              WhatsApp, Viber, Telegram <br />
-              <a class="contacts__text-link" href="tel:+34674863788">
-                +3 467 486-37-88
-              </a>
-            </p>
-            <p class="contacts__text">
-              Avenida grandes playas 79, <br />
-              Corralejo la Oliva Fuerteventura, <br />
-              Spain. 35660
-            </p>
+        <h2 class="title application__title" id="application">
+          Оставить заявку
+        </h2>
+        <form class="form">
+          <div class="form__wrapper">
+            <input class="form__input" type="text" placeholder="Name" />
+            <input class="form__input" type="tel" placeholder="Phone" />
+            <input class="form__input" type="email" placeholder="Email" />
+            <div class="form__checkbox">
+              <label for="checkbox" class="form__checkbox-text"
+                >Умеете плавать?</label
+              >
+              <label class="form__checkbox-label"
+                ><input
+                  id="checkbox"
+                  class="form__checkbox-input"
+                  type="checkbox" />
+
+                <span class="form__checkbox-item"></span
+              ></label>
+            </div>
           </div>
-        </div>
-        <ul class="connection__social">
-          <li class="connection__social-item">
-            <a class="connection__social-link" href="#"> INSTAGRAM </a>
-          </li>
-          <li class="connection__social-item">
-            <a class="connection__social-link" href="#"> FACEBOOK </a>
-          </li>
-          <li class="connection__social-item">
-            <a class="connection__social-link" href="#"> YOUTUBE </a>
-          </li>
-        </ul>
+          <div class="form__pricing pricing" id="pricing">
+            <div class="container">
+              <div class="pricing__items">
+                <a class="pricing__items-link" href="#">
+                  <div class="pricing__item">
+                    <span class="pricing__item-name">Стандарт</span>
+                    <ul class="pricing-wrapper">
+                      <li class="pricing__item-text">
+                        Проживание на вилле 5 ночей
+                      </li>
+                      <li class="pricing__item-text">
+                        Номер категории стандарт
+                      </li>
+                      <li class="pricing__item-text">
+                        Экипировка для обучения
+                      </li>
+                      <li class="pricing__item-text">
+                        Обучение серфингу 5 тренировок по 2 часа
+                      </li>
+                      <li class="pricing__item-text">Страховка</li>
+                    </ul>
+                    <span class="pricing__item-num">950<span>$</span></span>
+                  </div>
+                </a>
+                <a class="pricing__items-link" href="#">
+                  <div class="pricing__item">
+                    <span class="pricing__item-name">Все включено</span>
+                    <ul class="pricing-wrapper">
+                      <li class="pricing__item-text">
+                        Проживание на вилле 6 ночей
+                      </li>
+                      <li class="pricing__item-text">Номер категории люкс</li>
+                      <li class="pricing__item-text">
+                        Экипировка для обучения
+                      </li>
+                      <li class="pricing__item-text">
+                        Обучение серфингу 6 тренировок по 2 часа
+                      </li>
+                      <li class="pricing__item-text">Страховка</li>
+                      <li class="pricing__item-text">
+                        Вечеринка с угощениями и дискотекой
+                      </li>
+                      <li class="pricing__item-text">
+                        Авиа перелет Тенерифе -Лансароте - Тенерифе
+                      </li>
+                      <li class="pricing__item-text">Ужины на вилле</li>
+                    </ul>
+                    <span class="pricing__item-num">1450<span>$</span></span>
+                  </div>
+                </a>
+                <a class="pricing__items-link" href="#">
+                  <div class="pricing__item active">
+                    <span class="pricing__item-name">Профи</span>
+                    <ul class="pricing-wrapper">
+                      <li class="pricing__item-text">
+                        Проживание на вилле 8 ночей
+                      </li>
+                      <li class="pricing__item-text">Номер категории люкс</li>
+                      <li class="pricing__item-text">
+                        Экипировка для обучения
+                      </li>
+                      <li class="pricing__item-text">
+                        Обучение серфингу 16 тренировок по 2 часа
+                      </li>
+                      <li class="pricing__item-text">Страховка</li>
+                      <li class="pricing__item-text">
+                        Вечеринка с угощениями и дискотекой
+                      </li>
+                      <li class="pricing__item-text">
+                        Авиа перелет Тенерифе -Лансароте - Тенерифе
+                      </li>
+                      <li class="pricing__item-text">
+                        Завтраки, обеды и ужины на вилле
+                      </li>
+                    </ul>
+                    <span class="pricing__item-num">1950<span>$</span></span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <button class="form__button" type="submit">Send</button>
+        </form>
       </div>
     </section>
+
+    <!-- <footer>
+      <div class="contacts">
+        <p class="contacts__text">
+          Есть вопрос?<br />
+          Вы можете связаться с нами:
+        </p>
+        <p class="contacts__text">
+          WhatsApp, Viber, Telegram <br />
+          <a class="contacts__text-link" href="tel:+34674863788">
+            +3 467 486-37-88
+          </a>
+        </p>
+        <p class="contacts__text">
+          Avenida grandes playas 79, <br />
+          Corralejo la Oliva Fuerteventura, <br />
+          Spain. 35660
+        </p>
+      </div>
+      <ul class="connection__social">
+        <li class="connection__social-item">
+          <a class="connection__social-link" href="#"> INSTAGRAM </a>
+        </li>
+        <li class="connection__social-item">
+          <a class="connection__social-link" href="#"> FACEBOOK </a>
+        </li>
+        <li class="connection__social-item">
+          <a class="connection__social-link" href="#"> YOUTUBE </a>
+        </li>
+      </ul>
+    </footer> -->
   </body>
 </html>

@@ -98,7 +98,7 @@
   //   background-color: #19b5fe;
   // }
   &.swiper-pagination-bullet-active {
-    background-color: rgb(0 178 160);
+    background-color: var(--green);
 
     transform: scale(1.3);
   }
