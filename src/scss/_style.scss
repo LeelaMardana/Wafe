@@ -556,7 +556,7 @@ body {
   .grid {
     padding: 0.5rem;
     display: grid;
-    grid-template-columns: 30px 150px 180px 220px 120px 175px 1fr;
+    grid-template-columns: 30px 150px 180px 245px 120px 175px 1fr;
     border-bottom: 1px solid var(--main);
   }
   &__inner {
@@ -564,8 +564,8 @@ body {
     width: 100%;
   }
   #id {
-    font-size: 25px;
-    padding-bottom: 5px;
+    font-size: 20px;
+    padding-bottom: 3px;
   }
   &__head {
     background: var(--main);

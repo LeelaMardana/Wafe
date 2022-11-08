@@ -12,8 +12,11 @@ swiper();
 
 // Own scripts
 
+import { service } from './modules/service';
 import { validation } from './modules/validation';
 import { sendForm } from './modules/sendForm';
+import { render } from './modules/render';
 
 validation();
 sendForm();
+service.getData().then(data => render(data));

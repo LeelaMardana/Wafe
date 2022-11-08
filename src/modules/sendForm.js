@@ -1,8 +1,10 @@
 import { service } from './service';
+import { render } from './render';
 
 const sendForm = () => {
   const form = document.querySelector('#form');
 
+  const elements = form.querySelectorAll('.form__input');
   const nameInput = form.querySelector('#form-name');
   const emailInput = form.querySelector('#form-email');
   const phoneInput = form.querySelector('#form-phone');
@@ -107,22 +109,16 @@ const sendForm = () => {
       tariff: tariff.textContent,
     };
 
-    console.log(user);
     service
       .addData(user)
       .then(data => {
-        statusBlock.textContent = successText;
-        console.log(data);
+        status.textContent = successText;
+        elements.forEach(input => (input.value = ''));
+        swimInput.checked = false;
+
+        service.getData().then(data => render(data));
       })
       .catch(error => (status.textContent = 'Ошибка! Сервер не доступен.'));
-
-    // Отправка на сервер
-    // sendData(formBody)
-    //   .then(res => {
-    //     formElements.forEach(input => (input.value = ''));
-    //     statusBlock.textContent = successText;
-    //     console.log(res);
-    //   })
   };
 
   // Кнопка отправки формы
