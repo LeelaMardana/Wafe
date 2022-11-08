@@ -3,6 +3,8 @@
   --white: #fff;
   --main: #abe3ed;
   --green: rgb(0 178 160);
+  --yellow: #ffd864;
+  --red: rgb(255 112 112);
   --liner: linear-gradient(
     221deg,
     rgb(239, 246, 255, 0.9) 17%,
@@ -308,7 +310,7 @@ body {
 }
 
 .application {
-  padding: 100px 0;
+  padding: 100px 0 70px;
   &__title {
     margin-bottom: 100px;
   }
@@ -427,6 +429,21 @@ body {
     display: flex;
     justify-content: space-between;
     column-gap: 20px;
+    &-link {
+      border: 2px solid transparent;
+      transition: all 0.2s;
+      &:hover {
+        border: 2px solid var(--green);
+        color: var(--green);
+      }
+      &.active {
+        border: 2px solid var(--green);
+        color: var(--black);
+        .pricing__item {
+          background-color: var(--main);
+        }
+      }
+    }
   }
   &-wrapper {
     display: flex;
@@ -442,19 +459,6 @@ body {
     font-weight: 400;
     color: var(--black);
     padding: 30px;
-    border: 2px solid transparent;
-    transition: all 0.2s;
-    &:hover {
-      border: 2px solid var(--green);
-      color: var(--green);
-    }
-    &.active {
-      border: 2px solid var(--green);
-      background-color: var(--main);
-      &:hover {
-        color: var(--black);
-      }
-    }
     &-name {
       display: block;
       text-align: center;
@@ -517,6 +521,78 @@ body {
       &:hover {
         color: #00b2a0;
       }
+    }
+  }
+}
+
+.status {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  & span:first-child {
+    margin-bottom: 10px;
+  }
+}
+.error-description {
+  color: rgb(242, 69, 69);
+  font-size: 14px;
+}
+.reg-error {
+  color: rgb(242, 69, 69);
+  outline-color: rgb(242, 69, 69);
+  &::placeholder {
+    color: rgb(242, 69, 69);
+  }
+}
+
+.data {
+  padding: 50px 0 100px;
+  font-family: 'Raleway';
+  font-size: 18px;
+  .grid {
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: 30px 150px 180px 220px 120px 175px 1fr;
+    border-bottom: 1px solid var(--main);
+  }
+  &__inner {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  #id {
+    font-size: 25px;
+    padding-bottom: 5px;
+  }
+  &__head {
+    background: var(--main);
+  }
+  &__body-items {
+    align-items: center;
+  }
+  &__btns {
+    display: flex;
+    gap: 35px;
+  }
+  &__btn {
+    letter-spacing: 0.6px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+    height: 30px;
+    padding: 0px 18px;
+    border: 1px solid var(--black);
+    opacity: 0.9;
+    &.btn-delete:hover {
+      opacity: 1;
+      background-color: var(--red);
+    }
+    &.btn-edit:hover {
+      opacity: 1;
+      background-color: var(--yellow);
     }
   }
 }

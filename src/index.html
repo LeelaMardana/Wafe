@@ -336,18 +336,33 @@
         <h2 class="title application__title" id="application">
           Оставить заявку
         </h2>
-        <form class="form">
+        <form class="form" id="form">
           <div class="form__wrapper">
-            <input class="form__input" type="text" placeholder="Name" />
-            <input class="form__input" type="tel" placeholder="Phone" />
-            <input class="form__input" type="email" placeholder="Email" />
+            <input
+              class="form__input"
+              type="text"
+              placeholder="Name"
+              id="form-name"
+            />
+            <input
+              class="form__input"
+              type="tel"
+              placeholder="Phone"
+              id="form-phone"
+            />
+            <input
+              class="form__input"
+              type="email"
+              placeholder="Email"
+              id="form-email"
+            />
             <div class="form__checkbox">
               <label for="checkbox" class="form__checkbox-text"
                 >Умеете плавать?</label
               >
               <label class="form__checkbox-label"
                 ><input
-                  id="checkbox"
+                  id="form-swim"
                   class="form__checkbox-input"
                   type="checkbox" />
 
@@ -406,7 +421,7 @@
                   </div>
                 </a>
                 <a class="pricing__items-link" href="#">
-                  <div class="pricing__item active">
+                  <div class="pricing__item">
                     <span class="pricing__item-name">Профи</span>
                     <ul class="pricing-wrapper">
                       <li class="pricing__item-text">
@@ -438,6 +453,62 @@
           </div>
           <button class="form__button" type="submit">Send</button>
         </form>
+      </div>
+    </section>
+    <section class="data">
+      <div class="container">
+        <h4 class="title">Заявки</h4>
+        <div class="data__inner">
+          <div class="data__head">
+            <ul class="data__head-items grid">
+              <li>#</li>
+              <li>Имя</li>
+              <li>Телефон</li>
+              <li>Email</li>
+              <li>Плавает</li>
+              <li>Тариф</li>
+              <li>Действия</li>
+            </ul>
+          </div>
+          <div class="data__body">
+            <ul class="data__body-items grid">
+              <li id="id">1</li>
+              <li>Mark</li>
+              <li>+996702635010</li>
+              <li>otto@gmail.com</li>
+              <li>Да</li>
+              <li>Все включено</li>
+              <li>
+                <div class="data__btns">
+                  <button type="button" class="data__btn btn-edit">
+                    Изменить
+                  </button>
+                  <button type="button" class="data__btn btn-delete">
+                    Удалить
+                  </button>
+                </div>
+              </li>
+            </ul>
+            <ul class="data__body-items grid">
+              <li id="id">1</li>
+              <li>Mark</li>
+              <li>+996702635010</li>
+              <li>otto@gmail.com</li>
+              <li>Да</li>
+              <li>Все включено</li>
+              <li>
+                <div class="data__btns">
+                  <button type="button" class="data__btn btn-edit">
+                    Изменить
+                  </button>
+                  <button type="button" class="data__btn btn-delete">
+                    Удалить
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
     <footer class="footer">

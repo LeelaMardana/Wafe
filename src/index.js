@@ -11,6 +11,9 @@ import { swiper } from './modules/swiper';
 swiper();
 
 // Own scripts
-import { tra } from './modules/tra';
 
-tra();
+import { validation } from './modules/validation';
+import { sendForm } from './modules/sendForm';
+
+validation();
+sendForm();

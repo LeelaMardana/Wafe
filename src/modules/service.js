@@ -1,24 +1,21 @@
-const URL = 'https://6368902528cd16bba706dd6f.mockapi.io/api/v1/wafe/';
+const URL = 'https://6368902528cd16bba706dd6f.mockapi.io/AwesomeTowa/data/wafe';
 
 class Service {
-  get() {
-    console.log(URL);
+  getDataElem(id) {
+    return fetch(`${URL}/${id}`).then(response => response.json());
   }
-  getUser(id) {
-    return fetch(`${URL}${id}`).then(response => response.json());
-  }
-  getUsers() {
+  getData() {
     return fetch(URL).then(response => response.json());
   }
-  // addUsers(user) {
-  //   return fetch('http://localhost:4545/users', {
-  //     method: 'POST',
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //     },
-  //     body: JSON.stringify(user),
-  //   }).then(response => response.json());
-  // }
+  addData(user) {
+    return fetch(URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(user),
+    }).then(response => response.json());
+  }
   // removeUser(id) {
   //   return fetch(`http://localhost:4545/users/${id}`, {
   //     method: 'DELETE',
