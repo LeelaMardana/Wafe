@@ -73,8 +73,7 @@ body {
   background: var(--liner);
 
   &__wrap {
-    margin-top: 10px;
-    height: 80px;
+    height: 60px;
     transition: all 0.5s;
     display: flex;
     justify-content: space-between;
@@ -82,7 +81,7 @@ body {
   }
   & .menu {
     display: flex;
-    width: 777px;
+    width: 716px;
     gap: 45px;
     &__item-link {
       font-family: 'Roboto Condensed', sans-serif;
@@ -100,6 +99,10 @@ body {
   }
   & .logo__link {
     color: var(--black);
+    svg {
+      margin-bottom: -4px;
+      height: 50px;
+    }
   }
 }
 
@@ -429,6 +432,7 @@ body {
     display: flex;
     justify-content: space-between;
     column-gap: 20px;
+    padding-top: 60px;
     &-link {
       border: 2px solid transparent;
       transition: all 0.2s;
