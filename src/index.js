@@ -17,8 +17,10 @@ import { service } from './modules/service';
 import { validation } from './modules/validation';
 import { sendForm } from './modules/sendForm';
 import { render } from './modules/render';
+import { deleteData } from './modules/deleteData';
 
 validation();
 sendForm();
 menu();
+deleteData();
 service.getData().then(data => render(data));

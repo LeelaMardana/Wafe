@@ -16,11 +16,11 @@ class Service {
       body: JSON.stringify(user),
     }).then(response => response.json());
   }
-  // removeUser(id) {
-  //   return fetch(`http://localhost:4545/users/${id}`, {
-  //     method: 'DELETE',
-  //   }).then(response => response.json());
-  // }
+  deleteData(id) {
+    return fetch(`${URL}/${id}`, {
+      method: 'DELETE',
+    }).then(response => response.json());
+  }
   // changeUser(id, permissions) {
   //   return fetch(`http://localhost:4545/users/${id}`, {
   //     method: 'PATCH',

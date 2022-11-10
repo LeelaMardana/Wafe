@@ -111,14 +111,14 @@ const sendForm = () => {
 
     service
       .addData(user)
-      .then(data => {
-        status.textContent = successText;
-        elements.forEach(input => (input.value = ''));
-        swimInput.checked = false;
-
-        service.getData().then(data => render(data));
+      .then(() => {
+        service.getData().then(data => {
+          render(data);
+          status.textContent = successText;
+          form.reset();
+        });
       })
-      .catch(error => (status.textContent = 'Ошибка! Сервер не доступен.'));
+      .catch(() => (status.textContent = 'Ошибка! Сервер не доступен.'));
   };
 
   // Кнопка отправки формы
