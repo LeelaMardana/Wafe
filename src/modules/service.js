@@ -7,13 +7,13 @@ class Service {
   getData() {
     return fetch(URL).then(response => response.json());
   }
-  addData(user) {
+  addData(data) {
     return fetch(URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(user),
+      body: JSON.stringify(data),
     }).then(response => response.json());
   }
   deleteData(id) {
@@ -31,15 +31,16 @@ class Service {
   //   }).then(response => response.json());
   // }
 
-  // editUser(userData) {
-  //   return fetch(`http://localhost:4545/users/${userData.id}`, {
-  //     method: 'PUT',
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //     },
-  //     body: JSON.stringify(userData),
-  //   }).then(response => response.json());
-  // }
+  editData(data) {
+    return fetch(`${URL}/${data.id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    }).then(response => response.json());
+  }
+
   // filterUsers(filterOption) {
   //   return fetch(`http://localhost:4545/users?${filterOption}=true`).then(
   //     response => response.json()

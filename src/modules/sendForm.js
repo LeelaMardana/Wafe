@@ -3,8 +3,6 @@ import { render } from './render';
 
 const sendForm = () => {
   const form = document.querySelector('#form');
-
-  const elements = form.querySelectorAll('.form__input');
   const nameInput = form.querySelector('#form-name');
   const emailInput = form.querySelector('#form-email');
   const phoneInput = form.querySelector('#form-phone');
@@ -26,11 +24,13 @@ const sendForm = () => {
   const status = document.createElement('span');
   statusBlock.classList.add('status');
   statusBlock.append(status);
+  formButton.before(status.parentNode);
 
   // Создаем статус текст
   const loadText = 'Загрузка...';
   const successText =
     'Данные успешно отправлены! Наш менеджер с вами свяжется.';
+  const serverText = 'Ошибка! Сервер не доступен.';
 
   // Выбор тарифа
   pricingItems.addEventListener('click', e => {
@@ -47,11 +47,15 @@ const sendForm = () => {
   // Проверка валидации
   const validate = tariffItem => {
     const errorDescription = document.querySelectorAll('.error-description');
-    errorDescription.forEach(item => item.remove());
-
     const elements = form.querySelectorAll('.form__input');
+
+    // Очистка старых ошибок перед валидацией
+    errorDescription.forEach(item => item.remove());
+    elements.forEach(elem => elem.classList.remove('reg-error'));
+
     let error = false;
 
+    // Создание ошибки
     const CreateNewError = error => {
       const newError = document.createElement('span');
       newError.textContent = error;
@@ -66,8 +70,6 @@ const sendForm = () => {
 
     // Проверка на пустое значение
     elements.forEach(elem => {
-      elem.classList.remove('reg-error');
-
       if (elem.value.trim() === '') {
         error = true;
 
@@ -94,7 +96,6 @@ const sendForm = () => {
   const submitForm = () => {
     const tariffItem = pricingItems.querySelector('.active');
 
-    formButton.before(statusBlock);
     if (validate(tariffItem)) return;
 
     status.textContent = loadText;
@@ -116,15 +117,17 @@ const sendForm = () => {
           render(data);
           status.textContent = successText;
           form.reset();
+          pricingItemsLink.forEach(link => link.classList.remove('active'));
         });
       })
-      .catch(() => (status.textContent = 'Ошибка! Сервер не доступен.'));
+      .catch(() => (status.textContent = serverText));
   };
 
   // Кнопка отправки формы
   form.addEventListener('submit', e => {
     e.preventDefault();
-    submitForm();
+
+    if (form.dataset.method !== 'edit') submitForm();
   });
 };
 

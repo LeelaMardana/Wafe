@@ -7,9 +7,9 @@ export const render = users => {
     dataBody.insertAdjacentHTML(
       'beforeend',
       `
-    <ul class="data__body-items grid" >
-              <li id="id">${user.id}</li>
-              <li>${user.name}</li>
+    <ul class="data__body-items grid" data-key="${user.id}"><li id="id">${
+        user.id
+      }</li><li>${user.name}</li>
               <li>${user.phone}</li>
               <li>${user.email}</li>
               <li>${user.swim ? 'Да' : 'Нет'}</li>
