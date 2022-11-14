@@ -12,13 +12,6 @@ export const sendData = () => {
   const pricingItems = document.querySelector('.pricing__items');
   const pricingItemsLink = document.querySelectorAll('.pricing__items-link');
 
-  /// just for test
-  // nameInput.value = 'Anton';
-  // emailInput.value = 'Deankurumi@gmail.com';
-  // phoneInput.value = '+996702635010';
-  // pricingItemsLink[0].classList.add('active');
-  ///
-
   // Создаем статус
   const status = document.createElement('div');
   status.classList.add('status');
