@@ -10,6 +10,11 @@
     rgb(239, 246, 255, 0.9) 17%,
     rgb(171, 227, 237, 0.9) 100%
   );
+  --liner--mob: linear-gradient(
+    279deg,
+    rgb(239, 246, 255, 0.9) 17%,
+    rgb(171, 227, 237, 0.9) 100%
+  );
 }
 
 body {
@@ -55,7 +60,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding-top: 100px;
+  padding-top: 60px;
   min-height: 100vh;
   position: relative;
   z-index: 1;
@@ -129,14 +134,14 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
-  margin-top: 10vh;
+  margin-top: 9vh;
   align-items: center;
-  height: 70vh;
+  height: 77vh;
   &__title {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
-    font-size: 200px;
-    line-height: 235px;
+    font-size: 12.5rem;
+    line-height: 14.6875rem;
     letter-spacing: 0.6px;
     color: #0d302c;
   }

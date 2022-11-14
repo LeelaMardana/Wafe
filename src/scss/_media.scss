@@ -1,10 +1,49 @@
 @media (max-width: 991px) {
+  .burger {
+    display: block;
+  }
+  .navbar .menu {
+    top: 60px;
+    flex-direction: column;
+    justify-content: start;
+    height: auto;
+    font-size: 20px;
+    align-items: center;
+    gap: 35px;
+    background: var(--liner--mob);
+    padding: 100px 15px;
+    width: 100%;
+    position: fixed;
+    left: -100%;
+    transition: left 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .navbar .menu-btn {
+    position: relative;
+    order: 1;
+    width: 40px;
+    height: 40px;
+  }
+  .navbar .menu.animate {
+    left: 0;
+  }
+
+  .hero__title {
+    font-size: 9rem;
+  }
 }
 @media (max-width: 767px) {
 }
 @media (max-width: 690px) {
 }
 @media (max-width: 575px) {
+  .hero__title {
+    font-size: 6rem;
+  }
+  .greeting .title {
+    padding: 0;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+  }
 }
 @media (max-width: 500px) {
 }

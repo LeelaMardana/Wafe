@@ -12,6 +12,7 @@ swiper();
 
 // Own scripts
 
+import { navbar } from './modules/navbar';
 import { menu } from './modules/menu';
 import { service } from './modules/service';
 import { validation } from './modules/validation';
@@ -21,10 +22,11 @@ import { deleteData } from './modules/deleteData';
 import { editData } from './modules/editData';
 import { saveName } from './modules/helpers';
 
-validation();
-sendData();
-menu();
-deleteData();
-editData();
+navbar();
+// validation();
+// menu();
+// sendData();
+// deleteData();
+// editData();
 saveName();
-service.getData().then(data => render(data));
+// service.getData().then(data => render(data));
