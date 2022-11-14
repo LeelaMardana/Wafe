@@ -616,22 +616,13 @@ body {
     gap: 35px;
   }
   &__btn {
-    letter-spacing: 0.6px;
-    background-color: transparent;
+    border-radius: 18px;
+    padding: 3px 15px;
+    background-color: var(--green);
+    color: var(--white);
     cursor: pointer;
-    transition: all 0.2s;
-    height: 30px;
-    padding: 0px 18px;
-    border: 1px solid var(--black);
-    opacity: 0.9;
-    &.btn-delete:hover {
-      opacity: 1;
-      background-color: var(--red);
-    }
-    &.btn-edit:hover {
-      opacity: 1;
-      background-color: var(--yellow);
-    }
+    width: 100%;
+    border: none;
   }
 }
 
@@ -673,11 +664,12 @@ body {
   }
   &-item__btn {
     margin-top: 10px;
-    border: 1px solid #ececed;
+    border: none;
     border-radius: 18px;
     padding: 3px 15px;
     background-color: var(--green);
-    color: #fff;
+
+    color: var(--white);
     cursor: pointer;
     width: 100%;
   }
