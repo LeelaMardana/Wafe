@@ -23,10 +23,10 @@ import { editData } from './modules/editData';
 import { saveName } from './modules/helpers';
 
 navbar();
-// validation();
-// menu();
-// sendData();
-// deleteData();
-// editData();
+validation();
+menu();
+sendData();
+deleteData();
+editData();
 saveName();
-// service.getData().then(data => render(data));
+service.getData().then(data => render(data));
