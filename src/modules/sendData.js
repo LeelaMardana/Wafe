@@ -1,7 +1,7 @@
 import { service } from './service';
 import { render } from './render';
 
-const sendForm = () => {
+export const sendData = () => {
   const form = document.querySelector('#form');
   const nameInput = form.querySelector('#form-name');
   const emailInput = form.querySelector('#form-email');
@@ -13,23 +13,22 @@ const sendForm = () => {
   const pricingItemsLink = document.querySelectorAll('.pricing__items-link');
 
   /// just for test
-  nameInput.value = 'Anton';
-  emailInput.value = 'Deankurumi@gmail.com';
-  phoneInput.value = '+996702635010';
-  pricingItemsLink[0].classList.add('active');
+  // nameInput.value = 'Anton';
+  // emailInput.value = 'Deankurumi@gmail.com';
+  // phoneInput.value = '+996702635010';
+  // pricingItemsLink[0].classList.add('active');
   ///
 
   // Создаем статус
-  const statusBlock = document.createElement('div');
-  const status = document.createElement('span');
-  statusBlock.classList.add('status');
-  statusBlock.append(status);
-  formButton.before(status.parentNode);
+  const status = document.createElement('div');
+  status.classList.add('status');
+  formButton.before(status);
 
   // Создаем статус текст
   const loadText = 'Загрузка...';
   const successText =
     'Данные успешно отправлены! Наш менеджер с вами свяжется.';
+  const errorText = 'Ошибка! Проверьте заполненные данные.';
   const serverText = 'Ошибка! Сервер не доступен.';
 
   // Выбор тарифа
@@ -45,35 +44,17 @@ const sendForm = () => {
   });
 
   // Проверка валидации
-  const validate = tariffItem => {
-    const errorDescription = document.querySelectorAll('.error-description');
+  const validate = activeTariff => {
     const elements = form.querySelectorAll('.form__input');
 
-    // Очистка старых ошибок перед валидацией
-    errorDescription.forEach(item => item.remove());
     elements.forEach(elem => elem.classList.remove('reg-error'));
 
     let error = false;
-
-    // Создание ошибки
-    const CreateNewError = error => {
-      const newError = document.createElement('span');
-      newError.textContent = error;
-      newError.classList.add('error-description');
-
-      // Пишем в статус ошибка
-      status.textContent = 'Ошибка!';
-
-      // Добавляем описание ошибки
-      status.after(newError);
-    };
 
     // Проверка на пустое значение
     elements.forEach(elem => {
       if (elem.value.trim() === '') {
         error = true;
-
-        CreateNewError(`Поле «${elem.placeholder}» не может быть пустым*`);
         elem.classList.add('reg-error');
       }
     });
@@ -85,22 +66,23 @@ const sendForm = () => {
     }
 
     //Проверка на выбор тарифа
-    if (!tariffItem) {
+    if (!activeTariff) {
       error = true;
-      CreateNewError('Выберите тариф*');
+      pricingItemsLink.forEach(link => link.classList.add('error'));
+    } else {
+      pricingItemsLink.forEach(link => link.classList.remove('error'));
     }
 
     return error;
   };
 
   const submitForm = () => {
-    const tariffItem = pricingItems.querySelector('.active');
-
-    if (validate(tariffItem)) return;
-
     status.textContent = loadText;
 
-    const tariff = tariffItem.querySelector('.pricing__item-name');
+    const activeTariff = pricingItems.querySelector('.active');
+
+    if (validate(activeTariff)) return (status.textContent = errorText);
+    const tariff = activeTariff.querySelector('.pricing__item-name');
 
     const user = {
       name: nameInput.value,
@@ -130,5 +112,3 @@ const sendForm = () => {
     if (form.dataset.method !== 'edit') submitForm();
   });
 };
-
-export { sendForm };

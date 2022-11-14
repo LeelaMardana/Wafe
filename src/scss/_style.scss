@@ -447,6 +447,9 @@ body {
           background-color: var(--main);
         }
       }
+      &.error {
+        border-color: rgb(242, 69, 69);
+      }
     }
   }
   &-wrapper {
@@ -534,6 +537,7 @@ body {
   font-weight: 400;
   text-align: center;
   font-size: 30px;
+
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -541,10 +545,7 @@ body {
     margin-bottom: 10px;
   }
 }
-.error-description {
-  color: rgb(242, 69, 69);
-  font-size: 14px;
-}
+
 .reg-error {
   color: rgb(242, 69, 69);
   outline-color: rgb(242, 69, 69);

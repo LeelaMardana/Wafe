@@ -15,13 +15,13 @@ swiper();
 import { menu } from './modules/menu';
 import { service } from './modules/service';
 import { validation } from './modules/validation';
-import { sendForm } from './modules/sendForm';
+import { sendData } from './modules/sendData';
 import { render } from './modules/render';
 import { deleteData } from './modules/deleteData';
 import { editData } from './modules/editData';
 
 validation();
-sendForm();
+sendData();
 menu();
 deleteData();
 editData();
