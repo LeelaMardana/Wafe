@@ -2,7 +2,7 @@ import { render } from './render';
 import { service } from './service';
 
 export const editData = () => {
-  const dataBody = document.querySelector('#data-body');
+  const dataInner = document.querySelector('.data__inner');
   const form = document.querySelector('form');
   const nameInput = document.querySelector('#form-name');
   const emailInput = document.querySelector('#form-email');
@@ -55,9 +55,10 @@ export const editData = () => {
 
   // клик по кнопке редактировать, добавление аттрибута,
   // сохранение данных userData
-  dataBody.addEventListener('click', e => {
-    if (e.target.closest('.btn-edit')) {
-      const id = e.target.closest('.data__body-items').dataset.key;
+  dataInner.addEventListener('click', e => {
+    if (e.target.closest('#btn-edit')) {
+      const id = e.target.closest('#data-item').dataset.key;
+      // e.target.closest('.data-item').dataset.key;
       const tariffs = form.querySelectorAll('.pricing__items-link');
 
       // Очистка старых ошибок
