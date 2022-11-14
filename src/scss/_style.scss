@@ -90,10 +90,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-right: 60px;
   }
   & .menu {
     display: flex;
-    width: 716px;
     gap: 45px;
 
     &__item-link {
@@ -626,17 +626,20 @@ body {
   }
 }
 
+//mobile data
 .data {
   color: var(--black);
   &__title {
     text-align: center;
+  }
+  &__items {
+    display: none;
   }
   &-item {
     width: 330px;
     font-size: 16px;
     padding: 15px 20px;
     border: 2px solid var(--main);
-    margin-bottom: 40px;
     font-family: 'Raleway';
   }
   &-item__title {
@@ -655,8 +658,11 @@ body {
     margin-bottom: 10px;
   }
   &-item__name {
-    width: 95px;
     color: var(--green);
+    flex-grow: 1;
+  }
+  &-item__value {
+    flex-grow: 0;
   }
   &-item__btns {
     display: flex;

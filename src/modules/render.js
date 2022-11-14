@@ -3,13 +3,18 @@ export const render = users => {
 
   dataBody.innerHTML = '';
 
-  users.forEach(user => {
-    dataBody.insertAdjacentHTML(
-      'beforeend',
-      `
+  const width = document.documentElement.clientWidth;
+  console.log(width);
+  if (width <= 1240) {
+    return;
+  } else {
+    users.forEach(user => {
+      dataBody.insertAdjacentHTML(
+        'beforeend',
+        `
     <ul class="data__body-items grid" data-key="${user.id}"><li id="id">${
-        user.id
-      }</li><li>${user.name}</li>
+          user.id
+        }</li><li>${user.name}</li>
               <li>${user.phone}</li>
               <li>${user.email}</li>
               <li>${user.swim ? 'Да' : 'Нет'}</li>
@@ -25,6 +30,7 @@ export const render = users => {
                 </div>
               </li>
             </ul>`
-    );
-  });
+      );
+    });
+  }
 };
