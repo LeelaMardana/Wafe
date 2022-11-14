@@ -1,3 +1,21 @@
+@media (max-width: 1200px) {
+  .about {
+    &__wrapper {
+      flex-direction: column-reverse;
+      gap: 40px;
+    }
+    &__content {
+      max-width: 100%;
+    }
+    &__popup {
+      max-width: 100%;
+      &-wrap {
+        max-width: 100%;
+        height: 420px;
+      }
+    }
+  }
+}
 @media (max-width: 1140px) {
   .get {
     &__items {
@@ -97,6 +115,12 @@
       margin-bottom: 0;
     }
   }
+  .about {
+    padding: 50px 0;
+  }
+  .about__popup-wrap {
+    height: 300px;
+  }
 }
 @media (max-width: 690px) {
 }
@@ -127,4 +151,7 @@
   }
 }
 @media (max-width: 448px) {
+  .about__popup-wrap {
+    height: 240px;
+  }
 }
