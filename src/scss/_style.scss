@@ -81,6 +81,9 @@ body {
   &.scroll {
     background: var(--liner);
     color: var(--black);
+    & .menu__item-link:hover {
+      border-color: var(--black);
+    }
     & .logo__link {
       color: var(--black);
     }

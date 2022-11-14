@@ -1,4 +1,4 @@
-@media (max-width: 1240px) {
+@media (max-width: 1255px) {
   .data {
     &__head {
       display: none;
@@ -152,6 +152,12 @@
   .pricing__items-link:first-child {
     grid-column: span 1;
   }
+  .contacts-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
 }
 @media (max-width: 767px) {
   .title {
@@ -233,11 +239,14 @@
   .form__checkbox {
     padding: 0 0 0 18px;
   }
+  .contacts__item {
+    font-size: 18px;
+  }
 }
 @media (max-width: 448px) {
   .pricing__item {
     width: 310px;
-    height: 430px;
+    height: 390px;
     padding: 20px 10px;
   }
 
