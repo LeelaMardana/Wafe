@@ -106,6 +106,25 @@ body {
   }
 }
 
+.greeting {
+  .title {
+    padding: 0;
+    margin-bottom: 20px;
+    font-size: 36px;
+    &:after {
+      display: none;
+    }
+  }
+  input {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: initial;
+    width: 200px;
+    color: #01353e;
+  }
+}
 .hero {
   text-align: center;
   display: flex;

@@ -19,10 +19,12 @@ import { sendData } from './modules/sendData';
 import { render } from './modules/render';
 import { deleteData } from './modules/deleteData';
 import { editData } from './modules/editData';
+import { saveName } from './modules/helpers';
 
 validation();
 sendData();
 menu();
 deleteData();
 editData();
+saveName();
 service.getData().then(data => render(data));

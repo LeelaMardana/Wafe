@@ -123,7 +123,7 @@ export const editData = () => {
       // замена данных в БД
       service
         .editData(userData)
-        .then(data => {
+        .then(() => {
           // очистка формы, удаление атрибута, рендер новых данных
           service.getData().then(data => {
             render(data);
