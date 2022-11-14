@@ -107,7 +107,12 @@
   .title {
     font-size: 35px;
     margin-bottom: 50px;
+    &::after {
+      font-size: 55px;
+      line-height: 70px;
+    }
   }
+
   .get {
     padding: 75px 0 50px;
     &__items {
@@ -116,10 +121,22 @@
     }
   }
   .about {
-    padding: 50px 0;
+    padding: 50px 0 75px;
   }
   .about__popup-wrap {
     height: 300px;
+  }
+  .portfolio {
+    padding: 50px 0;
+  }
+  .swiper {
+    height: 330px;
+    &-btns {
+      display: none;
+    }
+    &-pagination {
+      display: none !important;
+    }
   }
 }
 @media (max-width: 690px) {
@@ -148,6 +165,9 @@
   .title {
     font-size: 28px;
     line-height: 40px;
+  }
+  .swiper {
+    height: 230px;
   }
 }
 @media (max-width: 448px) {
