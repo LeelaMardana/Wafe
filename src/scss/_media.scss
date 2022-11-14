@@ -1,4 +1,47 @@
+@media (max-width: 1140px) {
+  .get {
+    &__items {
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 0 20px;
+      margin-bottom: 50px;
+      justify-content: left;
+    }
+    &__item {
+      max-width: 90%;
+      margin-bottom: 40px;
+      &-img-title {
+        display: flex;
+        justify-content: left;
+        margin-bottom: 15px;
+        gap: 12px;
+        height: 56px;
+      }
+    }
+  }
+
+  .get__descr {
+    max-width: 50%;
+  }
+}
+
 @media (max-width: 991px) {
+  .navbar {
+    color: var(--black);
+    background: var(--liner);
+    & .logo__link {
+      color: var(--black);
+    }
+    & .menu__item-link:hover {
+      border-color: var(--black);
+    }
+  }
+  .burger span,
+  .burger span:before,
+  .burger span:after {
+    height: 5px;
+    background-color: var(--black);
+  }
   .burger {
     display: block;
   }
@@ -26,12 +69,34 @@
   .navbar .menu.animate {
     left: 0;
   }
-
   .hero__title {
     font-size: 9rem;
   }
+  .get {
+    &__inner {
+      flex-direction: column;
+      gap: 50px;
+    }
+    &__info {
+      max-width: 80%;
+    }
+    &__descr {
+      max-width: 90%;
+    }
+  }
 }
 @media (max-width: 767px) {
+  .title {
+    font-size: 35px;
+    margin-bottom: 50px;
+  }
+  .get {
+    padding: 75px 0 50px;
+    &__items {
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+  }
 }
 @media (max-width: 690px) {
 }
@@ -44,8 +109,22 @@
     margin-bottom: 20px;
     font-size: 1.4rem;
   }
+  .quote {
+    padding: 50px 0;
+    line-height: 35px;
+    & .blockquote {
+      font-size: 28px;
+      &__autor {
+        margin-top: 10px;
+      }
+    }
+  }
 }
 @media (max-width: 500px) {
+  .title {
+    font-size: 28px;
+    line-height: 40px;
+  }
 }
 @media (max-width: 448px) {
 }

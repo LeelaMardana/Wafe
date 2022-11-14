@@ -75,11 +75,18 @@ body {
   width: 100%;
   top: 0;
   left: 0;
-  background: var(--liner);
-
+  color: var(--white);
+  background: transparent;
+  transition: all 0.1s;
+  &.scroll {
+    background: var(--liner);
+    color: var(--black);
+    & .logo__link {
+      color: var(--black);
+    }
+  }
   &__wrap {
     height: 60px;
-    transition: all 0.5s;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -88,23 +95,25 @@ body {
     display: flex;
     width: 716px;
     gap: 45px;
+
     &__item-link {
       font-family: 'Roboto Condensed', sans-serif;
       font-weight: 400;
       font-size: 24px;
       line-height: 28px;
-      color: var(--black);
+
       transition: all 0.2s;
       border-bottom: 1px solid transparent;
       padding-bottom: 5px;
       &:hover {
-        border-color: var(--black);
+        border-color: var(--white);
       }
     }
   }
   & .logo__link {
-    color: var(--black);
+    color: var(--white);
     svg {
+      transition: all 0.5s;
       margin-bottom: -4px;
       height: 50px;
     }

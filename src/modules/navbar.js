@@ -2,7 +2,6 @@ export const navbar = () => {
   const btn = document.querySelector('.burger span');
   const menu = document.querySelector('.menu');
   const body = document.querySelector('body');
- 
 
   window.onscroll = () => {
     // если ширина экрана <= 992 тогда выполнить код
@@ -10,23 +9,9 @@ export const navbar = () => {
     if (width <= 992) return;
 
     const navbar = document.querySelector('.navbar');
-    const navbarWrap = document.querySelector('.navbar__wrap');
-    if (
-      document.body.scrollTop > 10 ||
-      document.documentElement.scrollTop > 10
-    ) {
-      navbar.style.background = `linear-gradient(
-        90deg,
-        rgba(213, 32, 71, 0.9) 0%,
-        rgba(238, 61, 27, 0.9) 100%
-      )`;
-      navbarWrap.style.paddingTop = '0px';
-      navbarWrap.style.height = '60px';
-    } else {
-      navbar.style.background = '';
-      navbarWrap.style.paddingTop = '';
-      navbarWrap.style.height = '';
-    }
+    if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10)
+      navbar.classList.add('scroll');
+    else navbar.classList.remove('scroll');
   };
 
   // если ширина экрана >= 992 тогда выполнить код
